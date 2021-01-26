@@ -1,6 +1,10 @@
 name: Build
 
-on: [push]
+on:
+  push:
+    branches: [ cruel-DTJA-v3.9 ]
+  pull_request:
+    branches: [ cruel-DTJA-v3.9 ]
 
 env:
   TOOLCHAIN: cruel
