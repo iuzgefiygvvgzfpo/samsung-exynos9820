@@ -24,6 +24,7 @@ jobs:
       run: |
         set -e -o pipefail
         ./cruelbuild config                    \
+                     os_patch_level=2020-12    \
                      model=${{ matrix.model }} \
                      name="KaoKernel"          \
                      toolchain=$TOOLCHAIN      \
