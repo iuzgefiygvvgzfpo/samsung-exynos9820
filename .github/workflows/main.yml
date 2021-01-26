@@ -25,7 +25,7 @@ jobs:
         set -e -o pipefail
         ./cruelbuild config                    \
                      model=${{ matrix.model }} \
-                     name="KaoKernel"         \
+                     name="KaoKernel"          \
                      toolchain=$TOOLCHAIN      \
                      +magisk                   \
                      +nohardening              \
@@ -37,6 +37,11 @@ jobs:
                      +mass_storage             \
                      +morosound                \
                      +boeffla_wl_blocker       \
+                     +noaudit                  \
+                     +noksm                    \
+                     +nomodules                \
+                     +fake_config              \
+                     +dtb                      \
                      +always_permit            \
         2>&1 | tee config.info
     - name: Install gcc-aarch64-linux-gnu
